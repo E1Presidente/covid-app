@@ -37,46 +37,117 @@
 }
 
 .Main {
+    padding: 0 30px;
     display: flex;
     flex-direction: row;
 }
 
-table {
+.Main table {
     margin: 10px 30px 0 30px;
     width: 100%;
     border-collapse: separate;
     border-spacing: 0 15px;
 }
 
-thead th {
-    color: white;
-    background-color: dodgerblue ;
+.Main thead th {
+    color: rgba(255, 255, 255);
+    background-color: rgba(30, 144, 255);
 }
 
-tr {
-    border: 2px solid lightgrey;
+.Main tr {
+    border: 2px solid rgba(211, 211, 211);
     border-radius: 15px;
+    cursor: pointer;
 }
 
-th {
+.Main th {
     padding: 20px 0 20px 0;
 }
 
-th:not(:first-child) {
+.Main th:not(:first-child) {
     padding-left: 20px;
     text-align: left;
-    border-left: 2px solid lightgrey;
-    border-bottom: 3px solid lightgrey;
+    border-left: 2px solid rgba(211, 211, 211);
+    border-bottom: 3px solid rgba(211, 211, 211);
 }
 
-th:first-child {
+.Main th:first-child {
     width: 60px;
     border-radius: 15px 0 0 15px;
-    border-left: 2px solid lightgrey;
-    border-bottom: 3px solid lightgrey;
+    border-left: 2px solid rgba(211, 211, 211);
+    border-bottom: 3px solid rgba(211, 211, 211);
 }
 
-th:last-child {
-    border-right: 2px solid lightgrey;
+.Main th:last-child {
+    border-right: 2px solid rgba(211, 211, 211);
     border-radius: 0 15px 15px 0;
+}
+
+.Modal {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.modal-body {
+    margin: 15% 40%;
+    padding: 0 3px 15px 10px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    color: rgba(128, 128, 128);;
+    background-color: rgba(255, 255, 255);
+    border-radius: 15px;
+}
+
+.modal-body h1 {
+    margin: 10px 0 0 0;
+    font-size: 35px;
+    font-weight: 600;
+    color: rgba(0, 0, 0);
+    text-align: center;
+}
+
+.modal-body img {
+    height: 20px;
+}
+
+.modal-body table {
+    margin: 5px 10px;
+    border-collapse: separate;
+    border-spacing: 0 20px;
+}
+
+.modal-body th {
+    font-weight: 500;
+}
+
+.modal-body th:not(:last-child) {
+    text-align: left;
+}
+
+.modal-body th:first-child {
+    width: 50px;
+}
+
+.modal-body th:last-child {
+    text-align: right;
+}
+
+.modal-button {
+    text-align: center;
+}
+
+.modal-button button {
+    height: 35px;
+    width: 120px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    color: rgba(255, 255, 255);
+    background: rgba(30, 144, 255);
+    border: hidden;
+    border-radius: 15px;
 }

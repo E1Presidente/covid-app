@@ -1,14 +1,10 @@
-import {useState, useEffect} from 'react'; 
-import {request} from './tools/request';
-
-function Main() {
+function Main({data, modalVisibility, getData}) {
   let count = 0;
-  const [data, setData] = useState([]);
 
-  useEffect(() => {
-    request()
-      .then(data => setData(data.Countries))
-  }, []);
+  const trClick = event => {
+    modalVisibility();
+    getData(event.target.textContent);
+  };
 
   console.log("Main render");
 
@@ -25,7 +21,7 @@ function Main() {
         <tbody>
           {data.map(element => {
             count++;
-            return <tr key={element.Country}>
+            return <tr key={element.Country} onClick={trClick}>
               <th>{count}</th>
               <th>{element.Country}</th>
               <th>{element.TotalConfirmed}</th>
