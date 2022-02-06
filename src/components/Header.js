@@ -1,6 +1,6 @@
 import Logo from './img/covid19_icon.png';
 
-function Header() {
+function Header({ search }) {
   return (
     <div className="Header">
       <div className="logo">
@@ -8,7 +8,7 @@ function Header() {
         <p>COVID-19</p>
       </div>
       <h1>STATISTIC</h1>
-      <input type="search" placeholder="Search..." />
+      <input type="search" placeholder="Search..." onInput={event => search(event.target.value)} />
     </div>
   );
 }

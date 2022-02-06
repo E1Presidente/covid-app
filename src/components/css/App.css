@@ -11,6 +11,7 @@
 }
 
 .logo {
+    padding-left: 50px;
     display: flex;
     flex-direction: column;
 }
@@ -36,6 +37,24 @@
     align-items: center;
 }
 
+input {
+    height: 60px;
+    width: 1000px;
+    margin-right: 35px;
+    padding-left: 25px;
+    border: 1px solid rgba(211, 211, 211);
+    border-bottom: 2px solid rgba(211, 211, 211);
+    border-top: hidden;
+    border-radius: 15px;
+    outline: unset;
+    font-size: 40px;
+    background: url(../img/zoom.png) no-repeat right scroll;
+}
+
+input::placeholder {
+    color: rgb(150, 138, 138);
+}
+
 .Main {
     padding: 0 30px;
     display: flex;
@@ -43,7 +62,7 @@
 }
 
 .Main table {
-    margin: 10px 30px 0 30px;
+    margin: 0 30px;
     width: 100%;
     border-collapse: separate;
     border-spacing: 0 15px;
@@ -57,11 +76,15 @@
 .Main tr {
     border: 2px solid rgba(211, 211, 211);
     border-radius: 15px;
+}
+
+.Main tbody tr {
     cursor: pointer;
 }
 
 .Main th {
-    padding: 20px 0 20px 0;
+    height: 50px;
+    padding: 10px 15px 10px 0;
 }
 
 .Main th:not(:first-child) {
@@ -69,6 +92,25 @@
     text-align: left;
     border-left: 2px solid rgba(211, 211, 211);
     border-bottom: 3px solid rgba(211, 211, 211);
+}
+
+.thead-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.thead-content p {
+    width: 100%;
+}
+
+.Main thead span {
+    cursor: pointer;
+    font-size: 23px;
+}
+
+.Main thead span:hover {
+    color: rgba(0, 0, 0);
 }
 
 .Main th:first-child {
@@ -79,6 +121,7 @@
 }
 
 .Main th:last-child {
+    width: 500px;
     border-right: 2px solid rgba(211, 211, 211);
     border-radius: 0 15px 15px 0;
 }
@@ -97,7 +140,7 @@
     width: 400px;
     display: flex;
     flex-direction: column;
-    color: rgba(128, 128, 128);;
+    color: rgba(128, 128, 128);
     background-color: rgba(255, 255, 255);
     border-radius: 15px;
 }
@@ -136,11 +179,11 @@
     text-align: right;
 }
 
-.modal-button {
+.modal-footer {
     text-align: center;
 }
 
-.modal-button button {
+.modal-footer button {
     height: 35px;
     width: 120px;
     cursor: pointer;
@@ -150,4 +193,8 @@
     background: rgba(30, 144, 255);
     border: hidden;
     border-radius: 15px;
+}
+
+.modal-footer button:hover {
+    background: rgb(100, 176, 248)
 }
