@@ -55,6 +55,10 @@ input::placeholder {
     color: rgb(150, 138, 138);
 }
 
+input:focus {
+    background: none;
+}
+
 .Main {
     padding: 0 30px;
     display: flex;
